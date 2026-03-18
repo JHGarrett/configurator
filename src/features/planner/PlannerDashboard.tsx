@@ -138,11 +138,11 @@ export const PlannerDashboard = () => {
     };
 
     return (
-        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default', pb: 4 }}>
+        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default', pb: 2 }}>
             <Container maxWidth="sm" sx={{ px: 2 }}>
                 <PlannerHeader />
 
-                <Stack spacing={1.5}>
+                <Stack spacing={1.5} sx={{ pb: 2 }}>
                     <ProductSelector
                         products={PRODUCTS}
                         selectedId={selectedProductId}

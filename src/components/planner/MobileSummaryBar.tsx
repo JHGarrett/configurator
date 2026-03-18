@@ -6,15 +6,20 @@ type MobileSummaryBarProps = {
 };
 
 export const MobileSummaryBar = ({ buildPlan }: MobileSummaryBarProps) => {
-    if (!buildPlan) return null;
+    if (!buildPlan) {
+        return null;
+    }
 
     return (
         <Box
             sx={{
                 position: 'sticky',
-                bottom: 12,
-                zIndex: 10,
-                mt: 2,
+                bottom: 0,
+                zIndex: 20,
+                pt: 1,
+                pb: 'calc(env(safe-area-inset-bottom, 0px) + 12px)',
+                background:
+                    'linear-gradient(to top, rgba(245,245,244,1) 70%, rgba(245,245,244,0))',
             }}
         >
             <Box
@@ -25,7 +30,6 @@ export const MobileSummaryBar = ({ buildPlan }: MobileSummaryBarProps) => {
                     borderRadius: 3,
                     px: 2,
                     py: 1.5,
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
                 }}
             >
                 <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
@@ -37,11 +41,9 @@ export const MobileSummaryBar = ({ buildPlan }: MobileSummaryBarProps) => {
                     </Box>
 
                     <Button
-                        variant="outlined"
+                        variant="contained"
                         size="small"
-                        onClick={() => {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                         Top
                     </Button>
