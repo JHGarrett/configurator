@@ -14,7 +14,7 @@ export const INITIAL_VALUES: PlannerFormValues = {
     width: '',
     depth: '',
     planterHeight: '15',
-    legHeight: '17',
+    legHeight: '33',
     notes: '',
 };
 
